@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+  - http:
+      paths:
+      - pathType: ImplementationSpecific
+        path: /path1(/|$)(.*)
+        backend:
+          service:
+            name: svc-nodeapp1
+            port:
+              number: 8080
+      - pathType: ImplementationSpecific
+        path: /path2(/|$)(.*)
+        backend:
+          service:
+            name: svc-nodeapp2
+            port:
+              number: 8080
