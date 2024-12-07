@@ -344,9 +344,9 @@ $ curl http://demo.example.com/path2/abc
 
 #### 리소스 삭제
 ```sh
-$ kubectl delete -f /vagrant/conf/nodeapp1.yaml
-$ kubectl delete -f /vagrant/conf/nodeapp2.yaml
-$ kubectl delete -f /vagrant/conf/nodeapp-ingress.yaml
-$ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.3/deploy/static/provider/baremetal/deploy.yaml
+kubectl delete -f /vagrant/conf/nodeapp1.yaml
+kubectl delete -f /vagrant/conf/nodeapp2.yaml
+kubectl delete -f /vagrant/conf/nodeapp-ingress.yaml
+kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.3/deploy/static/provider/baremetal/deploy.yaml
 
 ```
